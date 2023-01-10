@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador - Desencriptador</title>
+    <link rel="stylesheet" href="encriptador.css">
+</head>
+<body>
+    <header>
+         <a href="https://app.aluracursos.com/" target="_blank"><img src="images/Logo.png"></a>
+    </header>
+    <div class="div-encrypted">
+        <div>
+            <!--Sección para la palabra a encriptar/desencriptar-->
+            <input type="text" id="code" class="code" placeholder="Ingresa tu texto aquí">
+        </div>
+        <div class="div-encrypted-text">
+            <!--Sección para la conversión de la palabra-->
+            <label id="codeTransformed" class="code-tranfomed">
+                <img class="img-encrypted" src="images/Muñeco.png">
+            </label>
+        </div>
+    </div>
+    <div class="div-buttons">
+        <!--Sección para los botones de encriptar/desencriptar -->
+        <button id="encryp" class="encryp">Encriptar</button>
+        <button id="dencryp" class="dencryp">Desencriptar</button>
+        <button id="copy" class="copy">Copiar Texto</button>
+        <label for="copy" class="tooltip"><span id="tooltipSpan">Texto copiado al portapapeles</span></label>
+    </div>
+    <div>
+        <!--Datos de la persona que desarrolló-->
+    </div>
+</body>
+<footer>
+    <script src="encriptador.js"></script>
+    <div class="contacto">
+        <p>Página desarrollada por Guillermo González</p>
+        <a href="https://www.linkedin.com/in/guillermogondi/" target="_blank"><img src="images/linkedin.png"></a>
+        <a href="https://github.com/GuiGonDi925" target="_blank"><img src="images/github.png"></a>
+        <p>&#169; 2023</p>
+    </div>
+</footer>
+
+</html>
