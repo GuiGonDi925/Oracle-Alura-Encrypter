@@ -5,6 +5,9 @@ let btnDencrypt = document.getElementById("dencryp");
 let lbEncriptado =document.getElementById("codeTransformed");
 let btnCopy = document.getElementById("copy");
 let tooltipSpan = document.getElementById("tooltipSpan");
+let imgEncrypted = document.getElementById("img-encrypted");
+let tootltip = document.getElementById("tooltip");
+let textoEncryp
 
 function Encrypt(data){
     let fraseCodificada = data.split('');
@@ -56,9 +59,8 @@ function Dencrypt(data){
 }
 
 function CopyClipboard(){
-    var content = lbEncriptado.innerHTML;
-
-    navigator.clipboard.writeText(content)
+    
+    navigator.clipboard.writeText(textoEncryp)
         .then(()=> {
             console.log("Texto copiado al portapapeles");
         })
@@ -66,24 +68,37 @@ function CopyClipboard(){
             console.log("Algo salió mal...");
         })
     
-    tooltipSpan.style.visibility = 'visible';
+    tooltipSpan.style.display = 'block';
     tooltipSpan.style.opacity = '1';
-    tooltipSpan.style.transition= 'opacity 1.2s';
+    tooltipSpan.style.transition = 'opacity 1.2s';
+    btnCopy.style.display = 'none';
+    tootltip.style.display = 'block';
     
     setTimeout(() => {
-        tooltipSpan.style.visibility = 'hidden'; 
+        tooltipSpan.style.display = 'none'; 
         tooltipSpan.style.opacity = '0';
-        tooltipSpan.style.transition= 'opacity 1.2s';
+        tooltipSpan.style.transition = 'opacity 1.2s';
+        btnCopy.style.display = 'block';
+        tootltip.style.display = 'none';
     }, 2200);
     
 }
 
 btnEncrypt.addEventListener("click",function(e) {
-    lbEncriptado.innerHTML = Encrypt(cadenaPalabras.value.toLowerCase());
+    textoEncryp = Encrypt(cadenaPalabras.value.toLowerCase());
+
+    lbEncriptado.innerHTML = textoEncryp;
+    lbEncriptado.style.display = 'block';
+    imgEncrypted.style.display = 'none';
+
 });
 
 btnDencrypt.addEventListener("click",function(e) {
-    lbEncriptado.innerHTML = Dencrypt(cadenaPalabras.value.toLowerCase());
+    textoEncryp = Dencrypt(cadenaPalabras.value.toLowerCase());
+
+    lbEncriptado.innerHTML = textoEncryp;
+    lbEncriptado.style.display = 'inline';
+    imgEncrypted.style.display = 'none';
 });
 
 btnCopy.addEventListener("click", CopyClipboard);

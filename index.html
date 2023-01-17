@@ -9,39 +9,43 @@
 </head>
 <body>
     <header>
-         <a href="https://app.aluracursos.com/" target="_blank"><img src="images/Logo.png"></a>
+         <a href="https://app.aluracursos.com/" target="_blank"><img src="images/Logo.png" alt="Logo  de Alura Latam"></a>
     </header>
-    <div class="div-encrypted">
-        <div>
-            <!--Sección para la palabra a encriptar/desencriptar-->
-            <input type="text" id="code" class="code" placeholder="Ingresa tu texto aquí">
+
+    <main>
+        <section>
+            <div class="div-encrypted">
+                <!--Sección para la palabra a encriptar/desencriptar-->
+                <textarea id="code" class="code" placeholder="Ingresa tu texto aquí"></textarea>
+                
+                <button id="encryp" class="encryp">Encriptar</button>
+                <button id="dencryp" class="dencryp">Desencriptar</button>
+            </div>
+            <div class="div-encrypted-text">
+                <!--Sección para la conversión de la palabra-->
+                
+                <img id="img-encrypted" class="img-encrypted" src="images/Muñeco.png">
+                <textarea id="codeTransformed" class="code-tranfomed" readonly></textarea>
+
+                <button id="copy" class="copy">Copiar Texto</button>
+                <label for="copy" class="tooltip" id="tooltip"><span id="tooltipSpan">Texto copiado al portapapeles</span></label>
+            </div>
+        
+        </section>
+    </main>
+    
+
+    <footer>
+        <script src="encriptador.js"></script>
+        <div class="contacto">
+            <p>Página desarrollada por Guillermo González</p>
+            <a href="https://www.linkedin.com/in/guillermogondi/" target="_blank"><img src="images/linkedin.png"></a>
+            <a href="https://github.com/GuiGonDi925" target="_blank"><img src="images/github.png"></a>
+            <p>&#169; 2023</p>
         </div>
-        <div class="div-encrypted-text">
-            <!--Sección para la conversión de la palabra-->
-            <label id="codeTransformed" class="code-tranfomed">
-                <img class="img-encrypted" src="images/Muñeco.png">
-            </label>
-        </div>
-    </div>
-    <div class="div-buttons">
-        <!--Sección para los botones de encriptar/desencriptar -->
-        <button id="encryp" class="encryp">Encriptar</button>
-        <button id="dencryp" class="dencryp">Desencriptar</button>
-        <button id="copy" class="copy">Copiar Texto</button>
-        <label for="copy" class="tooltip"><span id="tooltipSpan">Texto copiado al portapapeles</span></label>
-    </div>
-    <div>
-        <!--Datos de la persona que desarrolló-->
-    </div>
+    </footer>
+
 </body>
-<footer>
-    <script src="encriptador.js"></script>
-    <div class="contacto">
-        <p>Página desarrollada por Guillermo González</p>
-        <a href="https://www.linkedin.com/in/guillermogondi/" target="_blank"><img src="images/linkedin.png"></a>
-        <a href="https://github.com/GuiGonDi925" target="_blank"><img src="images/github.png"></a>
-        <p>&#169; 2023</p>
-    </div>
-</footer>
+
 
 </html>
